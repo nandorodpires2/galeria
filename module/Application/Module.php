@@ -55,7 +55,7 @@ class Module
                 },
                 'ExposicaoTableGateway' => function ($sm) {
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
-                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype = new ResultSet();                    
                     $resultSetPrototype->setArrayObjectPrototype(new Model\Exposicao());
                     return new TableGateway('exposicao', $dbAdapter, null, $resultSetPrototype);
                 },

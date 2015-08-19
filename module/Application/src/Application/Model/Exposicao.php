@@ -23,8 +23,7 @@ class Exposicao {
     protected $exposicao_ativo = null;
     protected $usuario_id = null;
     
-    public function exchangeArray($data) {
-        
+    public function exchangeArray($data) {        
         foreach ($data as $key => $value) {
             $this->$key = $value;
         }
@@ -57,34 +56,6 @@ class Exposicao {
 
     function getUsuario_id() {
         return $this->usuario_id;
-    }
-
-    function setExposicao_id($exposicao_id) {
-        $this->exposicao_id = $exposicao_id;
-    }
-
-    function setTipo_exposicao_id($tipo_exposicao_id) {
-        $this->tipo_exposicao_id = $tipo_exposicao_id;
-    }
-
-    function setExposicao_nome($exposicao_nome) {
-        $this->exposicao_nome = $exposicao_nome;
-    }
-
-    function setExposicao_descricao($exposicao_descricao) {
-        $this->exposicao_descricao = $exposicao_descricao;
-    }
-
-    function setExposicao_data_criacao($exposicao_data_criacao) {
-        $this->exposicao_data_criacao = $exposicao_data_criacao;
-    }
-
-    function setExposicao_ativo($exposicao_ativo) {
-        $this->exposicao_ativo = $exposicao_ativo;
-    }
-
-    function setUsuario_id($usuario_id) {
-        $this->usuario_id = $usuario_id;
     }
 
 }
