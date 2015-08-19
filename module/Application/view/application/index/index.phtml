@@ -1,0 +1,91 @@
+<section>
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <p>
+                <a class="btn btn-success">
+                    <i class="glyphicon glyphicon-plus"></i> <?php echo $this->translate("Crie sua exposição"); ?>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p><?php echo $this->translate("Últimas Exposições"); ?></p>
+            <hr />
+        </div>
+    </div>
+    <?php if ($this->exposicoes->count() > 0) : ?>
+    <div class="row">        
+        <?php foreach ($this->exposicoes as $exposicao) : ?>        
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading small"><?php echo $exposicao->getExposicao_nome(); ?></div>
+                <div class="panel-body small">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="#" title="Fernando Rodrigues">
+                                <img src="<?php echo $this->basePath('/img/eu.jpg'); ?>" class="img img-rounded img-responsive" />
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                <i class="glyphicon glyphicon-time"></i> <?php echo $exposicao->getExposicao_data_criacao(); ?> <br />                                                       
+                            </p>
+                            <p>
+                                <i class="glyphicon glyphicon-user"></i> <?php echo $exposicao->getUsuario_id(); ?>                             
+                            </p>
+                            <p>
+                                <i class="glyphicon glyphicon-pushpin"></i> <?php echo $exposicao->getTipo_exposicao_id(); ?>
+                            </p>                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><hr /></div>
+                    </div>
+                    <div class="row">                               
+                        <div class="col-md-5">
+                            <i><?php echo $exposicao->getExposicao_descricao(); ?></i>
+                        </div>
+                        <div class="col-md-7">
+                            <img src="<?php echo $this->basePath('/img/capa_galeria_1.jpg'); ?>" class="img img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><hr /></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <i class="glyphicon glyphicon-star text-warning"></i>
+                            <i class="glyphicon glyphicon-star text-warning"></i>
+                            <i class="glyphicon glyphicon-star text-warning"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                            <i class="glyphicon glyphicon-star-empty"></i>                    
+                        </div>
+                        <div class="col-md-6 text-right small">
+                            1.983 Visualizações
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer text-center">
+                    <a href="" class="btn btn-primary">ABRIR EXPOSIÇÃO</a>
+                </div>
+            </div>
+        </div>   
+        <?php endforeach; ?>
+    </div>
+    <?php else : ?>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-warning">Nenhuma exposição cadastrada</div>
+        </div>
+    </div>
+    <?php endif; ?>
+</section>
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <p><?php echo $this->translate("Os Grandes Artistas"); ?></p>
+            <hr />
+        </div>
+    </div>
+</section>
